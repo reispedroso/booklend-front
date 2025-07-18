@@ -14,6 +14,7 @@ export default function SignInPage() {
       <div id="form" className="w-full h-full flex justify-center">
         <LoginForm />
       </div>
+
     </div>
   );
 }

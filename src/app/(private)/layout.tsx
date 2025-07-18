@@ -1,3 +1,5 @@
+import NavBar from "@/components/NavBar";
+
 export default function PrivateLayout({
   children,
 }: Readonly<{
@@ -5,7 +7,7 @@ export default function PrivateLayout({
 }>) {
   return (
     <div>
-      <h1>PRIVATE ROUTES</h1>
+      <NavBar />
       {children}
     </div>
   );

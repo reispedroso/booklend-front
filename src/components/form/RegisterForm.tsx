@@ -5,7 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Input } from "../input/AuthInput";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
 
 export default function RegisterPage() {
   const {
@@ -49,6 +50,7 @@ export default function RegisterPage() {
       className="w-full flex flex-col items-center"
     >
       <Input
+        className="mt-4"
         type="text"
         placeholder="Enter your username"
         {...register("username")}
@@ -58,6 +60,7 @@ export default function RegisterPage() {
       )}
 
       <Input
+        className="mt-4"
         type="text"
         placeholder="Enter your first name"
         {...register("firstName")}
@@ -66,6 +69,7 @@ export default function RegisterPage() {
         <p className="text-red-500 text-sm">{errors.firstName.message}</p>
       )}
       <Input
+        className="mt-4"
         type="text"
         placeholder="Enter your last name"
         {...register("lastName")}
@@ -75,6 +79,7 @@ export default function RegisterPage() {
       )}
 
       <Input
+        className="mt-4"
         type="email"
         placeholder="Enter your email"
         {...register("email")}
@@ -84,6 +89,7 @@ export default function RegisterPage() {
       )}
 
       <Input
+        className="mt-4"
         type="password"
         placeholder="Confirm your password"
         {...register("password")}
@@ -94,6 +100,7 @@ export default function RegisterPage() {
 
       <Input
         type="password"
+        className="mt-4"
         placeholder="Confirm your password"
         {...register("confirmPassword")}
       />
@@ -103,7 +110,7 @@ export default function RegisterPage() {
 
       {formError && <p className="text-red-500 text-sm">{formError}</p>}
 
-      <p className="text-sm text-gray-600 mb-2">
+      <p className="text-sm text-gray-600 m-2">
         Already have an account?
         <a
           href="/login"
@@ -113,13 +120,13 @@ export default function RegisterPage() {
         </a>
       </p>
 
-      <button
+      <Button
         type="submit"
         disabled={isSubmitting}
-        className="bg-booklend-black text-white w-3xs p-4 rounded-2xl disabled:opacity-50 mt-5"
+        className="bg-booklend-black"
       >
         {isSubmitting ? "Creating account..." : "Register"}
-      </button>
+      </Button>
     </form>
   );
 }
