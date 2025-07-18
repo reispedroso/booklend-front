@@ -2,10 +2,9 @@ import RegisterForm from "@/components/form/RegisterForm";
 
 export default function RegisterPage() {
   return (
-    <div className="bg-white shadow-lg p-10 rounded-2xl w-full max-w-md">
-
+    <div className="flex flex-col bg-white shadow-lg p-10 rounded-2xl w-full max-w-md">
       <div id="text">
-        <h1 className="text-5xl font-bold text-left">
+        <h1 className="text-3xl font-bold text-left">
           Hello! Please 
           <br /> register to start 
           <br /> renting!
