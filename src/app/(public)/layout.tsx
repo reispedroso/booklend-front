@@ -1,11 +1,19 @@
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 export default function PublicLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div className="w-full h-screen flex flex-col">
-      {children}
-    </div>
-  );
+  return <main>{children}</main>;
+}
+
+{
+  /* <SidebarProvider>
+      <AppSidebar />
+      <main>
+        <SidebarTrigger />
+        {children}
+      </main>
+    </SidebarProvider> */
 }

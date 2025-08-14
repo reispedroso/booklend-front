@@ -2,7 +2,8 @@ import LoginForm from "@/components/form/LoginForm";
 
 export default function SignInPage() {
   return (
-    <div className="bg-white shadow-lg p-10 rounded-2xl w-full max-w-md">
+    <div id="container" className="w-full h-screen flex items-center justify-center">
+      <div className="bg-white shadow-lg p-10 rounded-2xl w-full max-w-md">
 
       <div id="text">
         <h1 className="text-5xl font-bold mb-10 text-left">
@@ -15,6 +16,7 @@ export default function SignInPage() {
         <LoginForm />
       </div>
 
+    </div>
     </div>
   );
 }
